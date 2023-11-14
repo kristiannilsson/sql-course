@@ -1,26 +1,5 @@
-CREATE TABLE users (username TEXT PRIMARY KEY, password TEXT);
-INSERT INTO users
-VALUES ('kristian', '123');
-DROP TABLE users;
-CREATE TABLE students (email TEXT, name TEXT, PRIMARY KEY (email));
-INSERT INTO students
-VALUES ('kristian.nilsson@consid.se', 'kristian');
-DROP SCHEMA public CASCADE;
-CREATE SCHEMA public;
-CREATE TABLE grades (
-    student TEXT REFERENCES students(email),
-    course TEXT,
-    grade TEXT,
-    PRIMARY KEY (student, course)
-)
-DROP TABLE grades;
-INSERT INTO grades
-VALUES (
-        'kristian.nilsson@consid.se',
-        'dev23m_pp',
-        'vg'
-    )
-SELECT * FROM grades;
+
+
     /*
      students(_email_, name)
      courses(_code_, name, yh_points)
