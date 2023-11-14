@@ -66,8 +66,7 @@ equipped(player, item, equipslot)
 
 ## Queries
 
-### 2.1
- (Easy)
+### 2.1 (Easy)
 
 Inför den här övningen kommer du att behöva köra två SQL-filer som finns tillgängligt under lektion 1 på LearnPoint.
 
@@ -114,7 +113,7 @@ c) Hitta personen med högst lön på varje avdelning.
 
 USAs röstningssystem bygger på att varje delstat har ett visst antal elektorer, och kandidaten som har flest röster i delstaten får alla rösterna från elektorerna. Den med flest röster från elektorer vinner sedan valet. Kolla upp detta på internet om du är lite osäker inför uppgiften.
 
-1. Skapa en tabellen
+1. Skapa en tabell
 
 ```
 state_votes(_state_code_, biden_votes, trump_votes, electors)
@@ -122,7 +121,7 @@ state_votes(_state_code_, biden_votes, trump_votes, electors)
 
 och sätt in lite fiktiv data.
 
-2. Skapa en view `state_results` med en kolumn med statens kod, en med den vinnande presidentkandidaten, och en sista med antalet elektorer som kandidaten har vunnit.
+2. Skapa en view `state_results` med en kolumn med statens kod, en med den vinnande presidentkandidaten, och en sista med antalet elektorer som kandidaten har vunnit. Tips: kolla in `CASE`.
 
 3. Skriv en query som slutligen visar hur många totala röster varje kandidat har fått.
 
@@ -131,3 +130,14 @@ och sätt in lite fiktiv data.
 ```
 state_votes(_state_code_, _candidate_, votes, electors)
 ```
+
+Gör om uppgift 2 och 3 med den nya tabellen. Tips: kolla in `RANK()` och andra window-functions.
+
+Vilken struktur är bäst anser du? Finns det några för och nackdelar?
+
+
+### 2.7 (Medium)
+https://leetcode.com/problems/bank-account-summary-ii/
+
+### 2.8 (Hard)
+https://leetcode.com/problems/last-person-to-fit-in-the-bus/description/
