@@ -91,7 +91,9 @@ https://leetcode.com/problems/find-total-time-spent-by-each-employee/
 https://leetcode.com/problems/number-of-unique-subjects-taught-by-each-teacher/ 
 
 ### 2.5 (Easy)
-Hitta de totala lönerna uppdelat på avdelning i tabellen `employees`
+a) Hitta de totala lönerna uppdelat på avdelning i tabellen `employees`.
+b) Hitta den genomsnittliga lönen på hela företaget.
+c) Hitta personen med högst lön på varje avdelning.
 
 ### 2.6 (HARD)
 USAs röstningssystem bygger på att varje delstat har ett visst antal elektorer, och kandidaten som har flest röster i delstaten får alla rösterna från elektorerna. Den med flest röster från elektorer vinner sedan valet. Kolla upp detta på internet om du är lite osäker inför uppgiften.
