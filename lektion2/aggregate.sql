@@ -1,9 +1,3 @@
-SELECT COUNT(*) 
-FROM products
-HAVING orders > 100;
-
-
-
 /*
 1. SUM() med GROUP BY
 2. COUNT()
@@ -11,4 +5,5 @@ HAVING orders > 100;
 4. HAVING
 5. HAVING vs WHERE
 6. ROUND()
+7. COALESCE
  */
