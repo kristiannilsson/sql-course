@@ -39,6 +39,7 @@ equipped(player, item, equipslot)
 1. Din första uppgift är att lägga till meningsfulla primary keys och constraints. Förutom att se till att föremål verkligen existerar osv. bör du se till att en spelare inte kan utrusta flera föremål i samma *equipslot* och förhindra spelare från att utrusta föremål i fel *equipslot*. Se också till att alla monetära värden är icke-negativa. 
 
     Tips: Cirka fem constraints är lämpliga för denna uppgift.
+    Tips: Kolla in CHECK och UNIQUE
 
 2. Skapa databasen via `CREATE TABLE`-statements.
 
