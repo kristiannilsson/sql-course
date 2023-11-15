@@ -141,3 +141,6 @@ https://leetcode.com/problems/bank-account-summary-ii/
 
 ### 2.8 (Hard)
 https://leetcode.com/problems/last-person-to-fit-in-the-bus/description/
+
+### 2.9 (Easy)
+https://www.w3schools.com/sql/exercise.asp
