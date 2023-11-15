@@ -125,7 +125,7 @@ och sätt in lite fiktiv data.
 
 3. Skriv en query som slutligen visar hur många totala röster varje kandidat har fått.
 
-4. Byt nu tabellen till:
+4. [Extreme] Byt nu tabellen till:
 
 ```
 state_votes(_state_code_, _candidate_, votes, electors)
@@ -147,3 +147,8 @@ https://www.w3schools.com/sql/exercise.asp
 
 ### 2.10 (Easy)
 https://sqlbolt.com/lesson/select_queries_introduction
+
+### 2.11 (Medium)
+a) Rangordna anställda baserat på lön i tabellen `employees` per jobb-id.
+
+b) Utöka tabellen och visa titlarna på jobben också.
