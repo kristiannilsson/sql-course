@@ -144,3 +144,6 @@ https://leetcode.com/problems/last-person-to-fit-in-the-bus/description/
 
 ### 2.9 (Easy)
 https://www.w3schools.com/sql/exercise.asp
+
+### 2.10 (Easy)
+https://sqlbolt.com/lesson/select_queries_introduction
