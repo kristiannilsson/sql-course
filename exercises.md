@@ -175,3 +175,5 @@ Create an ERD for a car dealership. The dealership sells both new and used cars,
 - The car dealership maintains a service history for each of the cars serviced. The service  records are referenced by the car’s serial number.
 - A car brought in for service can be worked on by many mechanics, and each mechanic may work on many cars.
 - A car that is serviced may or may not need parts (e.g., adjusting a carburetor or cleaning a fuel injector nozzle does not require providing new parts).
+
+Lösningen är angiven i chen-notation https://www.gleek.io/er-diagrams.
