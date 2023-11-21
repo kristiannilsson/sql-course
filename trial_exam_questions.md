@@ -44,3 +44,25 @@ Så här kan det exempelvis se ut:
 a) Skriv en query som beräknar den totala storleken på filer som en student gjort över alla sina inlämningar. Student 1 har lämnat in filer med storleken 999 + 1337 + 1000. Student 2 har lämnat in filer i storleken 1600.
 
 b) Hitta alla inlämningar till "Hemsida för filmer" i kursen FWK22G_PLU som saknar minst en av `movies.json` eller `style.css`.
+
+## ER-diagram
+
+### 1
+Övningsuppgift på engelska i samma svårighetsgrad som på tentan:
+
+Your task is to make an ER-diagram for the database of a gym company, managing their
+facilities and their customer records.
+The database should contain a set of current and past customers. Each customer has a name
+and an email-address. Not every customer is a current member, and the database should keep
+track of which customers are currently members, and when their membership expires.
+Each gym facility has a city, an address and a name. Two facilities can have the same name,
+but only if they are in different cities. Gym facilities can be established in any city across the
+world (but you can assume cities have unique names).
+The database should also keep a record of times when each customer has accessed any gym
+facility. This may include multiple accesses from the same customer to the same facility at
+different times.
+
+## Normalisering
+
+
+## Views, constraints och triggers
