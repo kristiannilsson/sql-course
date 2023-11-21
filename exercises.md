@@ -157,7 +157,7 @@ b) Utöka tabellen och visa titlarna på jobben också.
 Du ska göra ett ER-diagram för kurser, betyg och studenter. Du är fri att göra antaganden kring vilka kolumner och vilka kopplingar som behövs göras.
 
 ### 3.2 (Medium)
-En företagsdatabas behöver lagra information personnumer, lön och telefonnummer om sina anställda. De behöver också hålla koll på sina olika avdelningar med budget och namn. Av försäkringsskäl behöver de också hålla koll på kontaktuppgifter och ålder på de anställdas barn. Du kan anta att bara en förälder jobbar på det aktuella företaget.
+En företagsdatabas behöver lagra information personnumer, lön och telefonnummer om sina anställda. De behöver också hålla koll på sina olika avdelningar med budget och namn på avdelning. Av försäkringsskäl behöver de också hålla koll på kontaktuppgifter och ålder på de anställdas barn. Du kan anta att bara en förälder jobbar på det aktuella företaget.
 
 Varje anställd tillhör en avdelning och varje avdelning har en avdelningschef.
 
