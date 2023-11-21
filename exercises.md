@@ -152,3 +152,26 @@ https://sqlbolt.com/lesson/select_queries_introduction
 a) Rangordna anställda baserat på lön i tabellen `employees` per jobb-id.
 
 b) Utöka tabellen och visa titlarna på jobben också.
+
+### 3.1 (Easy)
+Du ska göra ett ER-diagram för kurser, betyg och studenter. Du är fri att göra antaganden kring vilka kolumner och vilka kopplingar som behövs göras.
+
+### 3.2 (Medium)
+En företagsdatabas behöver lagra information personnumer, lön och telefonnummer om sina anställda. De behöver också hålla koll på sina olika avdelningar med budget och namn. Av försäkringsskäl behöver de också hålla koll på kontaktuppgifter och ålder på de anställdas barn. Du kan anta att bara en förälder jobbar på det aktuella företaget.
+
+Varje anställd tillhör en avdelning och varje avdelning har en avdelningschef.
+
+### 3.3 (Hard)
+Uppgiften är lånad och skriven i originalspråket.
+
+Create an ERD for a car dealership. The dealership sells both new and used cars, and it operates a service facility. Base your design on the following business rules:
+
+- A salesperson may sell many cars, but each car is sold by only one salesperson.
+- A customer may buy many cars, but each car is bought by only one customer.
+- A salesperson writes a single invoice for each car he or she sells.
+- A customer gets an invoice for each car he or she buys.
+- A customer may come in just to have his or her car serviced; that is, a customer need not buy a car to be classified as a customer.
+- When a customer takes one or more cars in for repair or service, one service ticket is written for each car.
+- The car dealership maintains a service history for each of the cars serviced. The service  records are referenced by the car’s serial number.
+- A car brought in for service can be worked on by many mechanics, and each mechanic may work on many cars.
+- A car that is serviced may or may not need parts (e.g., adjusting a carburetor or cleaning a fuel injector nozzle does not require providing new parts).
