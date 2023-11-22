@@ -153,6 +153,8 @@ a) Rangordna anställda baserat på lön i tabellen `employees` per jobb-id.
 
 b) Utöka tabellen och visa titlarna på jobben också.
 
+## ER-Diagram
+
 ### 3.1 (Easy)
 Du ska göra ett ER-diagram för kurser, betyg och studenter. Du är fri att göra antaganden kring vilka kolumner och vilka kopplingar som behövs göras.
 
@@ -177,3 +179,19 @@ Create an ERD for a car dealership. The dealership sells both new and used cars,
 - A car that is serviced may or may not need parts (e.g., adjusting a carburetor or cleaning a fuel injector nozzle does not require providing new parts).
 
 Lösningen är angiven i chen-notation https://www.gleek.io/er-diagrams.
+
+## Normalisering
+
+### 4.1 (Medium)
+https://www.relationaldbdesign.com/basic-sql/module3/table-normalization-exercise.php
+
+### 4.2 (Medium)
+| EMPLOYEE_ID | NAME  | JOB_CODE | JOB       | STATE_CODE | HOME_STATE |
+|-------------|-------|----------|-----------|------------|------------|
+| E001        | Alice | J01      | Chef      | 26         | Michigan   |
+| E001        | Alice | J02      | Waiter    | 26         | Michigan   |
+| E002        | Bob   | J02      | Waiter    | 56         | Wyoming    |
+| E002        | Bob   | J03      | Bartender | 56         | Wyoming    |
+| E003        | Alice | J01      | Chef      | 56         | Wyoming    |
+
+Gör om följande tabell till 3NF.

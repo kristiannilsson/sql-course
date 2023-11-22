@@ -45,6 +45,30 @@ a) Skriv en query som beräknar den totala storleken på filer som en student gj
 
 b) Hitta alla inlämningar till "Hemsida för filmer" i kursen FWK22G_PLU som saknar minst en av `movies.json` eller `style.css`.
 
+### 2
+Below is the schema for a database of users. Users can follow other users (and choose if they
+should receive notifications of that users activity or not).
+
+users(__username__, email)
+
+follows(__follower__, __follows__, notifications)
+    follower --> users.username
+    follows --> users.username
+
+a) Write an SQL query that lists the number of followers each user has. The result should
+have three columns: username, email and total_followers. For full score, every user must be
+in the result exactly once.
+
+Hint: COUNT(X) will not count rows where column x is null.
+
+b) Write an SQL query for finding all pairs of usernames A and B, where A follows B, but B
+does not follow A. 
+
+c) Write an SQL query for finding the usernames of all followers of the user with username
+'peter', and all followers of those followers (no duplicates).
+
+Hint: Use WITH
+
 ## ER-diagram
 
 ### 1
@@ -64,6 +88,17 @@ world (but you can assume cities have unique names).
 The database should also keep a record of times when each customer has accessed any gym
 facility. This may include multiple accesses from the same customer to the same facility at
 different times.
+
+### 2
+Make an ER-diagram for a web application where users can register, join interest groups,
+and post messages to these groups.
+
+Users have unique user names, and groups have unique names. Users can be members of any
+number of groups. The time each user joined a group should be recorded. Each group has an
+owner, which is a user. Each post is posted in a group by a user. Posts contain text. Posts
+are identified by their timestamp and the username of the user posting it. There is also a
+special kind of post called a group link, these contain a link to a group in addition to the
+normal parts of a post.
 
 ## Normalisering
 
