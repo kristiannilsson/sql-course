@@ -206,6 +206,9 @@ a) Gör en applikation i Python där man kan söka på förnamn i tabellen `empl
 
 b) Dela upp applikationen så att det finns en endpoint som är sårbar för SQL-injection och en som är säker.
 
+### 5.3 (Hard)
+Gör en applikation i 
+
 ## Triggers
 ### 6.1 (Medium)
 a) Lägg till ett fält updated_on i `employees`. Denna ska visa när den anställde senast uppdaterade sin information.

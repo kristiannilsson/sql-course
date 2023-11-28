@@ -41,7 +41,7 @@ def render_index():
 @app.route("/submit", methods=["POST"])
 def submit():
     salary = request.form.get("salary")
-    query_result = execute_query("SELECT first_name, salary FROM employees WHERE salary > %s", (salary, ))
+    query_result = execute_query("SELECT first_name, salary FROM employees WHERE salary > %s", (salary,))
     if query_result is None:
         query_result = []
     return render_template("index.html", data=query_result)
