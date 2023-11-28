@@ -195,3 +195,32 @@ https://www.relationaldbdesign.com/basic-sql/module3/table-normalization-exercis
 | E003        | Alice | J01      | Chef      | 56         | Wyoming    |
 
 Gör om följande tabell till 3NF.
+
+## Python / SQL-injection
+### 5.1 (Easy)
+https://www.hacksplaining.com/exercises/sql-injection#/start
+
+
+### 5.2 (Medium)
+a) Gör en applikation i Python där man kan söka på förnamn i tabellen `employees` via ett formulär.
+
+b) Dela upp applikationen så att det finns en endpoint som är sårbar för SQL-injection och en som är säker.
+
+## Triggers
+### 6.1 (Medium)
+a) Lägg till ett fält updated_on i `employees`. Denna ska visa när den anställde senast uppdaterade sin information.
+
+b) Se till att triggern bara fungerar när du uppdateras den anställdes email.
+
+### 6.2 (Hard)
+Notera följande schema som hanterar telefonräkningarna för ett telekomföretag:
+
+customer(_ssn, name, phone_num, plan)
+   plan --> pricing_plan.code
+pricing_plan(_code, connection_fee, price_per_second )
+phone_calls (_ssn, start_time., called_num, seconds)
+   ssn --> customer.ssn
+bill(_ssn, _month, _year, amount)
+   ssn -->  customer.ssn
+
+a) Skriv en trigger som uppdaterar telefonräkningen hos en kund efter de avslutat ett samtal.
