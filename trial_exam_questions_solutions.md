@@ -58,3 +58,7 @@ UNION
 SELECT follows_peter
 FROM peter_followers;
 ```
+
+## ER-diagram
+### 1
+https://imgur.com/a/Xuz1Zp7
