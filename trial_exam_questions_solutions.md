@@ -62,3 +62,8 @@ FROM peter_followers;
 ## ER-diagram
 ### 1
 https://imgur.com/a/Xuz1Zp7
+
+Alla attribut i accessed är primary keys.
+
+### 2
+https://imgur.com/a/wsCp0k5
