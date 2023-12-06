@@ -67,3 +67,40 @@ Alla attribut i accessed är primary keys.
 
 ### 2
 https://imgur.com/a/wsCp0k5
+
+## Normalisering
+### 1
+
+| Patient_ID | Patient_Name | Patient_Address | Appointment_Date | Doctor_Name | Doctor_Specialization | Doctor_Phone |
+| ---------- | ------------ | --------------- | ---------------- | ----------- | --------------------- | ------------ |
+| 001        | John Doe     | 123 Oak St.     | 2023-01-15       | Dr. Smith   | Cardiology            | 555-0101     |
+| 002        | Jane Smith   | 456 Maple Ave.  | 2023-01-20       | Dr. Jones   | Dermatology           | 555-0202     |
+| 001        | John Doe     | 123 Oak St.     | 2023-02-10       | Dr. Smith   | Cardiology            | 555-0101     |
+
+Studera tabellen ovan. Anta att läkarnas namn är unika.
+
+a) Det finns en _update anomaly_ i att du kan uppdatera patientnamnet på en rad och på så sätt få konflikterande information.
+Det finns en _deletion anomaly_ då om du tar bort bokningen för Jane Smith går hennes adress förlorad. Det finns även överflödig information i bland annat läkarens telefonnummer.
+
+b) Hur skulle du förbättra strukturen?
+
+Patients
+| Patient_ID | Patient_Name | Patient_Address |
+| ---------- | ------------ | --------------- |
+| 001        | John Doe     | 123 Oak St.     |
+| 002        | Jane Smith   | 456 Maple Ave.  |
+| 001        | John Doe     | 123 Oak St.     |
+
+Doctors
+| Doctor_Name | Doctor_Specialization | Doctor_Phone |
+| ----------- | --------------------- | ------------ |
+| Dr. Smith   | Cardiology            | 555-0101     |
+| Dr. Jones   | Dermatology           | 555-0202     |
+| Dr. Smith   | Cardiology            | 555-0101     |
+
+Appointments
+| Patient_ID | Appointment_Date | Doctor_Name |
+| ---------- | ---------------- | ----------- |
+| 001        | 2023-01-15       | Dr. Smith   |
+| 002        | 2023-01-20       | Dr. Jones   |
+| 001        | 2023-02-10       | Dr. Smith   |
