@@ -46,6 +46,17 @@ def submit():
         query_result = []
     return render_template("index.html", data=query_result)
 
+# OSÄKERT
+@app.route("/submit_unsafe", methods=["POST"])
+def submit_unsafe():
+    salary = request.form.get("salary")
+    query_result = execute_query(f"SELECT first_name, salary FROM employees WHERE salary > {salary}")
+    if query_result is None:
+        query_result = []
+    return render_template("index.html", data=query_result)
+
+
+
 
 if __name__ == "main":
     app.run()
