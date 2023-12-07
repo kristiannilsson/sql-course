@@ -119,6 +119,31 @@ a) Vad för problem kan uppstå med strukturen ovan vid användning?
 
 b) Hur skulle du förbättra strukturen?
 
+### 2
+Certainly! Here's an example of an exam question related to normalization in database design:
+
+---
+
+
+Studera följande tabell:
+
+| EmployeeID | Name        | Department   | DepartmentLocation | DepartmentPhone |
+|------------|-------------|--------------|--------------------|-----------------|
+| 123        | John Doe    | Sales        | Building A        | 555-0102        |
+| 456        | Jane Smith  | Marketing    | Building B        | 555-0304        |
+| 789        | Alex Brown  | Sales        | Building A        | 555-0102        |
+
+
+a) Redogör för eventuella _anomalies_ för den här tabellen.
+
+b) Identifiera upp till 3 beroenden mellan kolumnerna.
+
+c) Normalisera tabellen (3NF).
+
+---
+
+This question tests the student's understanding of normalization concepts, their ability to identify anomalies in a table structure,
+
 ## Views, constraints och triggers
 Integriteten hos en databas kan förbättras med bland annat:
 - Views: Virtuella tabeller som kan visa information som är överflödig att lagra i tabellerna
@@ -136,6 +161,8 @@ Du får poängavdrag om din lösning använder en trigger där en constraint had
 För triggers räcker det att specificera vilka åtgärder och tabeller den gäller, och PL/(pg)SQL
 pseudokod för funktionen den utför.
 
+### 1
+
 Din uppgift: Databasen innehåller kunder och abonnemang. Varje kund kan ha
 ett obegränsat antal abonnemang. Nedan är värden som bör finnas i databasen:
 - En kund har ett unikt id-nummer och ett namn, en månadsfakturering och en boolean
@@ -143,8 +170,8 @@ ett obegränsat antal abonnemang. Nedan är värden som bör finnas i databasen:
 - En Prenumeration tillhör en kund och har ett unikt telefonnummer, en plan, en
   månadsavgift och ett saldo.
 
-Implementera följande ytterligare begränsningar i din design. Sätt bokstäver i marginalen av
-din kod som indikerar var varje begränsning är implementerad (eventuellt samma bokstav på
+Implementera följande ytterligare constraints i din design. Sätt bokstäver i marginalen av
+din kod som indikerar var varje constraint är implementerad (eventuellt samma bokstav på
 flera ställen):
 - A: Varje plan måste vara en av 'prepaid', 'flatrate' eller 'corporate'.
 - B: Saldo-värdet måste vara 0 om planen inte är 'prepaid'.
@@ -155,3 +182,26 @@ flera ställen):
 - E: Om en kund raderas ska dess anslutna abonnemang automatiskt raderas.
 - F: Om den sista prenumerationen som tillhör en kund raderas, ska kunden
   automatiskt raderas.
+
+### 2
+Domänen är lik den i queries 1, med några förändringar.
+```
+assignment(_course_, _name_, description, deadline)
+submission(_id_, student, course, assignment, submission_time)
+    (course, assignment) --> assignment.(course, name)
+submitted_file(_submission_, _filename_, file_size, contents)
+    submission --> submission.id
+```
+Vi lägger också till en tabell `registered` som håller koll på vilka kurser en student är registrerad på.
+student is registered for:
+`registered(_student_, _course_)`
+Implementera följande ytterligare constraints i din design. Sätt bokstäver i marginalen av
+din kod som indikerar var varje constraint är implementerad (eventuellt samma bokstav på
+flera ställen):
+a) En nyare submission har ett högre idnr.
+b) Studenter kan bara lämna in inlämningar i kurser som de är registrerade till.
+c) filesize är ju beroende av contents i submitted_file. Går det att göra om tabellen till en tabell + view för att bli av med det här beroendet?
+använd gärna length(contents)
+d) När en inlämning tas bort ska dess filer också tas bort.
+e) Vid en UPDATE på submission ska submission_time automatiskt uppdateras.
+f) En student kan inte ha två inlämningar för samma uppgift med exakt samma tid.
