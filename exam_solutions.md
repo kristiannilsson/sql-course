@@ -42,12 +42,16 @@ WHERE rnk = 1;
 
 a)
 _update anomaly_ Exempelvis: Man kan uppdatera antalet credits på en kurs och databasen tillåter då konflikterande information.
+
 _deletion anomaly_ Exempelvis: Om man tar bort alla betyg för kursen WD förlorar man information om hur många poäng den är på.
 
 b)
 student_id --> student_name
+
 course_id --> credits
+
 (student_id, course_id) --> grade
+
 
 c)
 students(\_student_id, student_name)
