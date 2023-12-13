@@ -3,10 +3,11 @@
 a)
 
 ```
-SELECT username, email, contents
+SELECT username, email, content
 FROM users
-WHERE receiver='admin' AND sender=username AND readtime IS NULL
-ORDER BY sendtime
+JOIN messages ON users.username = messages.sender
+WHERE receiver = 'admin' AND readtime IS NULL
+ORDER BY sendtime;
 ```
 
 b)
